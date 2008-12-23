@@ -34,8 +34,8 @@ render["tags"] = []
       
       tag = {}
       tag["selector"] = t["scope"]
-      tag["begin"] = 'span([' #begin_string
-      tag["end"] = "" #end_string
+      tag["begin"] = 'span(['
+      tag["end"] = ""
       render["tags"] << tag
       begin_string = ""
       end_string = "]"
@@ -44,7 +44,7 @@ render["tags"] = []
             begin_string << ", :fill => rgb(#{Uv.rgb(settings, s["background"])})"
          end
          if s["foreground"]
-            begin_string << '' # "span(\""
+            begin_string << ''
             end_string <<  ", :stroke => rgb(#{Uv.rgb(settings, s["foreground"])})"
          end
          case s["fontStyle"]
@@ -66,10 +66,10 @@ render["tags"] = []
          codecolumn << ", :fill => rgb(#{Uv.rgb(settings, s["background"])})"
          codecolumn << ", :stroke => rgb(#{Uv.rgb(settings, s["foreground"])})"
          @bg = "background(rgb(#{Uv.rgb(settings, s["background"])}) ,:curve => 12)"
-         bg = Uv.alpha_blend(s["selection"], s["selection"]) if s["selection"]
+         bg = Uv.alpha_blend(s["background"], s["foreground"])
          numbercolumn = '"' 
          numbercolumn << ", :fill => rgb(#{Uv.rgb(settings, s["background"])})"
-         numbercolumn << ", :stroke => rgb(#{Uv.rgb(settings, s["foreground"])})"
+         numbercolumn << ", :stroke => rgb(#{Uv.rgb(settings, bg)})"
          
          tag = {}
          tag["begin"] = 'span("'
@@ -87,7 +87,7 @@ tag["end"]  =  '"\n",'
 render["line"] = tag
 
 tag = {}
-tag["begin"] = <<END
+tag["begin"] =<<END
 #{@bg}
 para( [
 END

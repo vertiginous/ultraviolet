@@ -1,3 +1,6 @@
+==0.10.3
+* Added shoes rendering
+
 == 0.10.2
 * Fixed --no-lines command line option.
 * Updated PHP syntax, no longer stalling.

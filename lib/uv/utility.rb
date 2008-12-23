@@ -63,5 +63,12 @@ module Uv
       else
          color
       end
-   end   
+   end
+   
+   def Uv.rgb settings, color, fg = false
+      if color
+         r = normalize_color(settings, color, fg)
+         r[1..-1].scan(/\w\w/).map{|n| n.to_i(16) }.join(', ')
+      end
+   end 
 end

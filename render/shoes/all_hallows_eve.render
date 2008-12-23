@@ -1,0 +1,126 @@
+--- 
+name: All Hallow's Eve
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: text
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: source
+- begin: span([
+  end: |
+    ], :stroke => rgb(153, 51, 204)),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(51, 135, 204)),
+
+  selector: constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(204, 120, 51)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(208, 208, 255)),
+
+  selector: meta.preprocessor.c
+- begin: span([
+  end: |
+    ]),
+
+  selector: keyword.control.import
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.name.function
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: variable.parameter
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: source comment.block
+- begin: span([
+  end: |
+    ], :stroke => rgb(102, 204, 51)),
+
+  selector: string
+- begin: span([
+  end: |
+    ], :stroke => rgb(170, 170, 170)),
+
+  selector: string constant.character.escape
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 0)),
+
+  selector: string.interpolated
+- begin: span([
+  end: |
+    ], :stroke => rgb(204, 204, 51)),
+
+  selector: string.regexp
+- begin: span([
+  end: |
+    ], :stroke => rgb(204, 204, 51)),
+
+  selector: string.literal
+- begin: span([
+  end: |
+    ], :stroke => rgb(85, 85, 85)),
+
+  selector: string.interpolated constant.character.escape
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: entity.name.type
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: entity.name.tag
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.other.attribute-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(200, 55, 48)),
+
+  selector: support.function
+listing: 
+  begin: |
+    background(rgb(0, 0, 0) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(0, 0, 0), :stroke => rgb(255, 255, 255), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(0, 0, 0), :stroke => rgb(255, 255, 255) ),"

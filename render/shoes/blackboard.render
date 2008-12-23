@@ -1,0 +1,151 @@
+--- 
+name: Blackboard
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(174, 174, 174)),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(216, 250, 60)),
+
+  selector: constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 100, 0)),
+
+  selector: entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(251, 222, 45)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(251, 222, 45)),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(97, 206, 60)),
+
+  selector: string, meta.verbatim
+- begin: span([
+  end: |
+    ], :stroke => rgb(141, 166, 206)),
+
+  selector: support
+- begin: span([
+  end: |
+    ]),
+
+  selector: variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(171, 42, 29), :emphasis => 'italic'),
+
+  selector: invalid.deprecated
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: invalid.illegal
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 100, 0), :emphasis => 'italic'),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 100, 0)),
+
+  selector: string constant.other.placeholder
+- begin: span([
+  end: |
+    ], :stroke => rgb(190, 205, 230)),
+
+  selector: meta.function-call.py
+- begin: span([
+  end: |
+    ], :stroke => rgb(127, 144, 170)),
+
+  selector: meta.tag, meta.tag entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: entity.name.section
+- begin: span([
+  end: |
+    ], :stroke => rgb(213, 224, 243)),
+
+  selector: keyword.type.variant
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: source.ocaml keyword.operator.symbol
+- begin: span([
+  end: |
+    ], :stroke => rgb(141, 166, 206)),
+
+  selector: source.ocaml keyword.operator.symbol.infix
+- begin: span([
+  end: |
+    ], :stroke => rgb(141, 166, 206)),
+
+  selector: source.ocaml keyword.operator.symbol.prefix
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: source.ocaml keyword.operator.symbol.infix.floating-point
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: source.ocaml keyword.operator.symbol.prefix.floating-point
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: source.ocaml constant.numeric.floating-point
+- begin: span([
+  end: |
+    ]),
+
+  selector: text.tex.latex meta.function.environment
+- begin: span([
+  end: |
+    ]),
+
+  selector: text.tex.latex meta.function.environment meta.function.environment
+- begin: span([
+  end: |
+    ], :stroke => rgb(251, 222, 45)),
+
+  selector: text.tex.latex support.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: source.plist string.unquoted, source.plist keyword.operator
+listing: 
+  begin: |
+    background(rgb(12, 16, 33) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(12, 16, 33), :stroke => rgb(248, 248, 248), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(12, 16, 33), :stroke => rgb(248, 248, 248) ),"

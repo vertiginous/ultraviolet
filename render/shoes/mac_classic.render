@@ -1,0 +1,191 @@
+--- 
+name: Mac Classic
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 102, 255), :emphasis => 'italic'),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 255), :weight => 'bold'),
+
+  selector: keyword, storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 205)),
+
+  selector: constant.numeric
+- begin: span([
+  end: |
+    ], :stroke => rgb(197, 6, 11), :weight => 'bold'),
+
+  selector: constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(88, 92, 246), :weight => 'bold'),
+
+  selector: constant.language
+- begin: span([
+  end: |
+    ], :stroke => rgb(49, 132, 149)),
+
+  selector: variable.language, variable.other
+- begin: span([
+  end: |
+    ], :stroke => rgb(3, 106, 7)),
+
+  selector: string
+- begin: span([
+  end: |
+    ], :stroke => rgb(38, 179, 26)),
+
+  selector: constant.character.escape, string source
+- begin: span([
+  end: |
+    ], :stroke => rgb(26, 146, 28)),
+
+  selector: meta.preprocessor
+- begin: span([
+  end: |
+    ], :stroke => rgb(12, 69, 13), :weight => 'bold'),
+
+  selector: keyword.control.import
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 162), :weight => 'bold'),
+
+  selector: entity.name.function, support.function.any-method
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: entity.name.type
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: variable.parameter
+- begin: span([
+  end: |
+    ], :stroke => rgb(112, 114, 126)),
+
+  selector: storage.type.method
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: meta.section entity.name.section, declaration.section entity.name.section
+- begin: span([
+  end: |
+    ], :stroke => rgb(60, 76, 114), :weight => 'bold'),
+
+  selector: support.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(109, 121, 222), :weight => 'bold'),
+
+  selector: support.class, support.type
+- begin: span([
+  end: |
+    ], :stroke => rgb(6, 150, 14), :weight => 'bold'),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(33, 67, 156), :weight => 'bold'),
+
+  selector: support.variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(104, 118, 135)),
+
+  selector: keyword.operator.js
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: invalid
+- begin: span([
+  end: |
+    ]),
+
+  selector: invalid.deprecated.trailing-whitespace
+- begin: span([
+  end: |
+    ]),
+
+  selector: text source, string.unquoted
+- begin: span([
+  end: |
+    ]),
+
+  selector: text source string.unquoted, text source text source
+- begin: span([
+  end: |
+    ], :stroke => rgb(104, 104, 91)),
+
+  selector: meta.tag.preprocessor.xml
+- begin: span([
+  end: |
+    ], :stroke => rgb(136, 136, 136)),
+
+  selector: meta.tag.sgml.doctype, meta.tag.sgml.doctype entity, meta.tag.sgml.doctype string, meta.tag.preprocessor.xml, meta.tag.preprocessor.xml entity, meta.tag.preprocessor.xml string
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: string.quoted.docinfo.doctype.DTD
+- begin: span([
+  end: |
+    ], :stroke => rgb(28, 2, 255)),
+
+  selector: meta.tag, declaration.tag
+- begin: span([
+  end: |
+    ], :weight => 'bold'),
+
+  selector: entity.name.tag
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: entity.other.attribute-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(12, 7, 255), :weight => 'bold'),
+
+  selector: markup.heading
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 0), :emphasis => 'italic'),
+
+  selector: markup.quote
+- begin: span([
+  end: |
+    ], :stroke => rgb(185, 6, 144)),
+
+  selector: markup.list
+listing: 
+  begin: |
+    background(rgb(255, 255, 255) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(255, 255, 255), :stroke => rgb(0, 0, 0), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(255, 255, 255), :stroke => rgb(0, 0, 0) ),"

@@ -1,0 +1,102 @@
+#! /usr/bin/env ruby
+begin
+   require 'plist'
+rescue LoadError
+   require 'rubygems'
+   require 'plist'
+end
+require 'uv/utility'
+
+
+base_dir = File.join( File.dirname(__FILE__), '..', 'render' )
+
+def settings
+   unless @settings
+      @settings = @theme["settings"].find { |s| ! s["name"] }["settings"]
+   end
+   @settings
+end
+
+@theme = Plist::parse_xml( ARGV[0] )
+render = {"name" => @theme["name"]}
+codecolumn = ""
+numbercolumn = ""
+standard_name = File.basename( ARGV[0] ).downcase.gsub(/\s+/, '_').gsub('.tmtheme', '').gsub(/\W/, '').gsub(/_+/, '_')
+
+render["tags"] = []
+
+@theme["settings"].each do |t|
+   if t["scope"]
+      class_name = t["name"].downcase.gsub(/\W/, ' ').gsub('.tmtheme', '').split(' ').collect{|s| s.capitalize}.join
+      if class_name == ""
+         class_name = "x" * t["name"].size
+      end
+      
+      tag = {}
+      tag["selector"] = t["scope"]
+      tag["begin"] = 'span([' #begin_string
+      tag["end"] = "" #end_string
+      render["tags"] << tag
+      begin_string = ""
+      end_string = "]"
+      if s = t["settings"]
+         if s["background"]
+            begin_string << ", :fill => rgb(#{Uv.rgb(settings, s["background"])})"
+         end
+         if s["foreground"]
+            begin_string << '' # "span(\""
+            end_string <<  ", :stroke => rgb(#{Uv.rgb(settings, s["foreground"])})"
+         end
+         case s["fontStyle"]
+            when /bold/
+               end_string << ", :weight => 'bold'"
+            when /italic/ 
+               end_string << ", :emphasis => 'italic'"
+            when /underline/ 
+               end_string << ", :underline => 'single'"
+            end
+      end_string << "),\n" 
+      tag["end"] = end_string
+      end
+      
+
+   elsif ! t["name"]
+      if s = t["settings"]
+         codecolumn = ""
+         codecolumn << ", :fill => rgb(#{Uv.rgb(settings, s["background"])})"
+         codecolumn << ", :stroke => rgb(#{Uv.rgb(settings, s["foreground"])})"
+         @bg = "background(rgb(#{Uv.rgb(settings, s["background"])}) ,:curve => 12)"
+         bg = Uv.alpha_blend(s["selection"], s["selection"]) if s["selection"]
+         numbercolumn = '"' 
+         numbercolumn << ", :fill => rgb(#{Uv.rgb(settings, s["background"])})"
+         numbercolumn << ", :stroke => rgb(#{Uv.rgb(settings, s["foreground"])})"
+         
+         tag = {}
+         tag["begin"] = 'span("'
+         tag["end"] = "#{numbercolumn} ),"
+         render["line-numbers"] = tag      
+      end
+   end
+end
+
+render["filter"] = '@escaped.inspect + ", " '
+
+tag = {}
+tag["begin"] = ""
+tag["end"]  =  '"\n",'
+render["line"] = tag
+
+tag = {}
+tag["begin"] = <<END
+#{@bg}
+para( [
+END
+tag["end"]   = "] #{codecolumn}, :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+render["listing"] = tag
+
+tag = {}
+tag["begin"] = "stack(:margin => 4 ){\n"
+tag["end"] = '}' 
+render["document"] = tag
+
+File.open( File.join( base_dir, "shoes", "#{standard_name}.render" ), "w" ) {|f| YAML.dump( render, f ) }

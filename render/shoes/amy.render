@@ -1,0 +1,251 @@
+--- 
+name: Amy
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(64, 64, 128), :emphasis => 'italic'),
+
+  selector: comment.block
+- begin: span([
+  end: |
+    ], :stroke => rgb(153, 153, 153)),
+
+  selector: string
+- begin: span([
+  end: |
+    ], :stroke => rgb(112, 112, 144)),
+
+  selector: constant.language
+- begin: span([
+  end: |
+    ], :stroke => rgb(112, 144, 176)),
+
+  selector: constant.numeric
+- begin: span([
+  end: |
+    ], :weight => 'bold'),
+
+  selector: constant.numeric.integer.int32
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: constant.numeric.integer.int64
+- begin: span([
+  end: |
+    ], :weight => 'bold'),
+
+  selector: constant.numeric.integer.nativeint
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: constant.numeric.floating-point.ocaml
+- begin: span([
+  end: |
+    ], :stroke => rgb(102, 102, 102)),
+
+  selector: constant.character
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 128, 160)),
+
+  selector: constant.language.boolean
+- begin: span([
+  end: |
+    ]),
+
+  selector: constant.language
+- begin: span([
+  end: |
+    ]),
+
+  selector: constant.other
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 128, 128)),
+
+  selector: variable.language, variable.other
+- begin: span([
+  end: |
+    ], :stroke => rgb(160, 128, 255)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(160, 160, 255)),
+
+  selector: keyword.operator
+- begin: span([
+  end: |
+    ], :stroke => rgb(208, 208, 255)),
+
+  selector: keyword.other.decorator
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: keyword.operator.infix.floating-point.ocaml
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: keyword.operator.prefix.floating-point.ocaml
+- begin: span([
+  end: |
+    ], :stroke => rgb(192, 128, 192)),
+
+  selector: keyword.other.directive
+- begin: span([
+  end: |
+    ], :stroke => rgb(192, 128, 192), :underline => 'single'),
+
+  selector: keyword.other.directive.line-number
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 160, 255)),
+
+  selector: keyword.control
+- begin: span([
+  end: |
+    ], :stroke => rgb(176, 255, 240)),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(96, 176, 255)),
+
+  selector: entity.name.type.variant
+- begin: span([
+  end: |
+    ], :stroke => rgb(96, 176, 255), :emphasis => 'italic'),
+
+  selector: storage.type.variant.polymorphic, entity.name.type.variant.polymorphic
+- begin: span([
+  end: |
+    ], :stroke => rgb(176, 0, 176)),
+
+  selector: entity.name.type.module
+- begin: span([
+  end: |
+    ], :stroke => rgb(176, 0, 176), :underline => 'single'),
+
+  selector: entity.name.type.module-type.ocaml
+- begin: span([
+  end: |
+    ], :stroke => rgb(160, 0, 80)),
+
+  selector: support.other
+- begin: span([
+  end: |
+    ], :stroke => rgb(112, 224, 128)),
+
+  selector: entity.name.type.class
+- begin: span([
+  end: |
+    ], :stroke => rgb(112, 224, 160)),
+
+  selector: entity.name.type.class-type
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(80, 160, 160)),
+
+  selector: entity.name.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 176, 176)),
+
+  selector: variable.parameter
+- begin: span([
+  end: |
+    ], :stroke => rgb(48, 128, 160)),
+
+  selector: entity.name.type.token
+- begin: span([
+  end: |
+    ], :stroke => rgb(60, 176, 208)),
+
+  selector: entity.name.type.token.reference
+- begin: span([
+  end: |
+    ], :stroke => rgb(144, 224, 224)),
+
+  selector: entity.name.function.non-terminal
+- begin: span([
+  end: |
+    ], :stroke => rgb(192, 240, 240)),
+
+  selector: entity.name.function.non-terminal.reference
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 144, 144)),
+
+  selector: entity.name.tag
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.other.attribute-name
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.type, support.class
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.other.variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(64, 0, 128), :weight => 'bold'),
+
+  selector: invalid.illegal
+- begin: span([
+  end: |
+    ], :stroke => rgb(32, 0, 32)),
+
+  selector: invalid.deprecated
+- begin: span([
+  end: |
+    ]),
+
+  selector: source.camlp4.embedded
+- begin: span([
+  end: |
+    ]),
+
+  selector: source.camlp4.embedded.parser.ocaml
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 80, 128)),
+
+  selector: punctuation
+listing: 
+  begin: |
+    background(rgb(32, 0, 32) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(32, 0, 32), :stroke => rgb(208, 208, 255), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(32, 0, 32), :stroke => rgb(208, 208, 255) ),"

@@ -1,0 +1,161 @@
+--- 
+name: MagicWB (Amiga)
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(141, 46, 117), :emphasis => 'italic'),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: string
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: constant.numeric
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 169, 149), :weight => 'bold'),
+
+  selector: constant.language
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 169, 149)),
+
+  selector: constant.character, constant.other
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 169, 149)),
+
+  selector: variable.language, variable.other
+- begin: span([
+  end: |
+    ], :weight => 'bold'),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(58, 104, 163), :weight => 'bold'),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: entity.name.type
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 169, 149)),
+
+  selector: entity.name.function
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: variable.parameter
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 255), :weight => 'bold'),
+
+  selector: entity.name
+- begin: span([
+  end: |
+    ], :stroke => rgb(58, 104, 163), :emphasis => 'italic'),
+
+  selector: entity.other.attribute-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(229, 179, 255)),
+
+  selector: support.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 0)),
+
+  selector: support.function.any-method
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: support.function.any-method - punctuation
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 169, 149)),
+
+  selector: support.type, support.class
+- begin: span([
+  end: |
+    ], :stroke => rgb(58, 104, 163)),
+
+  selector: support.variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: invalid
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 169, 149), :emphasis => 'italic'),
+
+  selector: string.quoted.other.lt-gt.include
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 169, 149)),
+
+  selector: string.quoted.double.include
+- begin: span([
+  end: |
+    ], :stroke => rgb(77, 78, 96)),
+
+  selector: markup.list
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: markup.raw
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 240, 201)),
+
+  selector: markup.quote
+- begin: span([
+  end: |
+    ], :stroke => rgb(76, 69, 126)),
+
+  selector: markup.quote markup.quote
+- begin: span([
+  end: |
+    ]),
+
+  selector: text.html source
+listing: 
+  begin: |
+    background(rgb(150, 150, 150) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(150, 150, 150), :stroke => rgb(0, 0, 0), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(150, 150, 150), :stroke => rgb(0, 0, 0) ),"

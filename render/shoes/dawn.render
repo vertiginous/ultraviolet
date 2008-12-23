@@ -1,0 +1,176 @@
+--- 
+name: Dawn
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(90, 82, 95), :emphasis => 'italic'),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(129, 31, 36), :weight => 'bold'),
+
+  selector: constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(191, 79, 36)),
+
+  selector: entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(121, 73, 56)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(167, 29, 93), :emphasis => 'italic'),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(11, 97, 37)),
+
+  selector: string | punctuation.definition.string
+- begin: span([
+  end: |
+    ], :stroke => rgb(105, 28, 151)),
+
+  selector: support
+- begin: span([
+  end: |
+    ], :stroke => rgb(35, 74, 151)),
+
+  selector: variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(121, 73, 56)),
+
+  selector: punctuation.separator
+- begin: span([
+  end: |
+    ], :stroke => rgb(181, 42, 29), :weight => 'bold'),
+
+  selector: invalid.deprecated
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248), :emphasis => 'italic'),
+
+  selector: invalid.illegal
+- begin: span([
+  end: |
+    ], :stroke => rgb(8, 8, 8)),
+
+  selector: string source
+- begin: span([
+  end: |
+    ], :stroke => rgb(105, 105, 105), :weight => 'bold'),
+
+  selector: string constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(35, 74, 151)),
+
+  selector: string variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(207, 86, 40)),
+
+  selector: string.regexp
+- begin: span([
+  end: |
+    ], :stroke => rgb(207, 86, 40), :weight => 'bold'),
+
+  selector: string.regexp.character-class, string.regexp constant.character.escaped, string.regexp source.ruby.embedded, string.regexp string.regexp.arbitrary-repitition
+- begin: span([
+  end: |
+    ], :stroke => rgb(129, 31, 36), :weight => 'bold'),
+
+  selector: string.regexp constant.character.escape
+- begin: span([
+  end: |
+    ]),
+
+  selector: text source
+- begin: span([
+  end: |
+    ], :stroke => rgb(105, 58, 23)),
+
+  selector: support.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(180, 55, 31)),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(35, 74, 151)),
+
+  selector: support.variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(105, 58, 23)),
+
+  selector: markup.list
+- begin: span([
+  end: |
+    ], :stroke => rgb(25, 53, 109), :weight => 'bold'),
+
+  selector: markup.heading | markup.heading entity.name
+- begin: span([
+  end: |
+    ], :stroke => rgb(11, 97, 37), :emphasis => 'italic'),
+
+  selector: markup.quote
+- begin: span([
+  end: |
+    ], :stroke => rgb(8, 8, 8), :emphasis => 'italic'),
+
+  selector: markup.italic
+- begin: span([
+  end: |
+    ], :stroke => rgb(8, 8, 8), :weight => 'bold'),
+
+  selector: markup.bold
+- begin: span([
+  end: |
+    ], :stroke => rgb(8, 8, 8), :underline => 'single'),
+
+  selector: markup.underline
+- begin: span([
+  end: |
+    ], :stroke => rgb(35, 74, 151), :emphasis => 'italic'),
+
+  selector: markup.link
+- begin: span([
+  end: |
+    ], :stroke => rgb(35, 74, 151)),
+
+  selector: markup.raw
+- begin: span([
+  end: |
+    ], :stroke => rgb(181, 42, 29)),
+
+  selector: markup.deleted
+- begin: span([
+  end: |
+    ], :stroke => rgb(25, 53, 109), :weight => 'bold'),
+
+  selector: meta.separator
+listing: 
+  begin: |
+    background(rgb(249, 249, 249) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(249, 249, 249), :stroke => rgb(8, 8, 8), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(249, 249, 249), :stroke => rgb(8, 8, 8) ),"

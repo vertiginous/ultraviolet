@@ -1,0 +1,171 @@
+--- 
+name: Slush & Poppies
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(64, 96, 64)),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(192, 48, 48)),
+
+  selector: string
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 128, 160)),
+
+  selector: constant.numeric
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: source.ocaml constant.numeric.floating-point
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 0, 0)),
+
+  selector: constant.character
+- begin: span([
+  end: |
+    ]),
+
+  selector: constant.language
+- begin: span([
+  end: |
+    ]),
+
+  selector: constant.character, constant.other
+- begin: span([
+  end: |
+    ]),
+
+  selector: variable.parameter, variable.other
+- begin: span([
+  end: |
+    ], :stroke => rgb(32, 96, 160)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(32, 96, 160)),
+
+  selector: keyword.operator
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: source.ocaml keyword.operator.symbol.prefix.floating-point
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: source.ocaml keyword.operator.symbol.infix.floating-point
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 128, 255)),
+
+  selector: entity.name.module,  support.other.module
+- begin: span([
+  end: |
+    ], :stroke => rgb(160, 128, 0)),
+
+  selector: storage.type
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 128, 128)),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(192, 128, 96)),
+
+  selector: entity.name.class.variant
+- begin: span([
+  end: |
+    ], :weight => 'bold'),
+
+  selector: keyword.other.directive
+- begin: span([
+  end: |
+    ]),
+
+  selector: source.ocaml keyword.other.directive.line-number
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 0, 0)),
+
+  selector: entity.name.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 0, 128)),
+
+  selector: storage.type.user-defined
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 0, 192)),
+
+  selector: entity.name.type.class.type
+- begin: span([
+  end: |
+    ]),
+
+  selector: variable.parameter
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.name.tag
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.other.attribute-name
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.function
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.type, support.class
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.variable
+- begin: span([
+  end: |
+    ]),
+
+  selector: invalid
+listing: 
+  begin: |
+    background(rgb(241, 241, 241) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(241, 241, 241), :stroke => rgb(0, 0, 0), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(241, 241, 241), :stroke => rgb(0, 0, 0) ),"

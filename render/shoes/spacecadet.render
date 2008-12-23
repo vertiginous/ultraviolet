@@ -1,0 +1,106 @@
+--- 
+name: SpaceCadet
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(71, 60, 69)),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 89, 120)),
+
+  selector: string
+- begin: span([
+  end: |
+    ], :stroke => rgb(168, 136, 90)),
+
+  selector: constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(89, 99, 128)),
+
+  selector: variable.parameter, variable.other
+- begin: span([
+  end: |
+    ], :stroke => rgb(114, 128, 89)),
+
+  selector: keyword - keyword.operator, keyword.operator.logical
+- begin: span([
+  end: |
+    ], :stroke => rgb(158, 191, 96)),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(96, 120, 191)),
+
+  selector: entity
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(138, 75, 102)),
+
+  selector: support
+- begin: span([
+  end: |
+    ], :stroke => rgb(137, 48, 98)),
+
+  selector: support.type.exception
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.name.tag
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.other.attribute-name
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.type, support.class
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.other.variable
+- begin: span([
+  end: |
+    ]),
+
+  selector: invalid
+- begin: span([
+  end: |
+    ]),
+
+  selector: meta.function.section
+listing: 
+  begin: |
+    background(rgb(13, 13, 13) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(13, 13, 13), :stroke => rgb(221, 230, 207), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(13, 13, 13), :stroke => rgb(221, 230, 207) ),"

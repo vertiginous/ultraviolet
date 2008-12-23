@@ -1,0 +1,121 @@
+--- 
+name: IDLE
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(145, 145, 145)),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 163, 63)),
+
+  selector: string
+- begin: span([
+  end: |
+    ]),
+
+  selector: constant.numeric
+- begin: span([
+  end: |
+    ], :stroke => rgb(165, 53, 174)),
+
+  selector: constant.language
+- begin: span([
+  end: |
+    ]),
+
+  selector: constant.character, constant.other
+- begin: span([
+  end: |
+    ]),
+
+  selector: variable.language, variable.other
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 86, 0)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 86, 0)),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(33, 67, 156)),
+
+  selector: entity.name.type
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(33, 67, 156)),
+
+  selector: entity.name.function
+- begin: span([
+  end: |
+    ]),
+
+  selector: variable.parameter
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.name.tag
+- begin: span([
+  end: |
+    ]),
+
+  selector: entity.other.attribute-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(165, 53, 174)),
+
+  selector: support.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(165, 53, 174)),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(165, 53, 174)),
+
+  selector: support.type, support.class
+- begin: span([
+  end: |
+    ], :stroke => rgb(165, 53, 174)),
+
+  selector: support.variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: invalid
+- begin: span([
+  end: |
+    ], :stroke => rgb(153, 0, 0)),
+
+  selector: constant.other.placeholder.py
+listing: 
+  begin: |
+    background(rgb(255, 255, 255) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(255, 255, 255), :stroke => rgb(0, 0, 0), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(255, 255, 255), :stroke => rgb(0, 0, 0) ),"

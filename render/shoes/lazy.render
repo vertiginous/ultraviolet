@@ -1,0 +1,126 @@
+--- 
+name: LAZY
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(140, 134, 143)),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(59, 91, 181)),
+
+  selector: constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(59, 91, 181)),
+
+  selector: entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(214, 42, 40)),
+
+  selector: text.tex.latex entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 120, 0)),
+
+  selector: keyword, storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(64, 155, 28)),
+
+  selector: string, meta.verbatim
+- begin: span([
+  end: |
+    ], :stroke => rgb(59, 91, 181)),
+
+  selector: support
+- begin: span([
+  end: |
+    ]),
+
+  selector: variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(153, 0, 0), :emphasis => 'italic'),
+
+  selector: invalid.deprecated
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: invalid.illegal
+- begin: span([
+  end: |
+    ], :stroke => rgb(59, 91, 181), :emphasis => 'italic'),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(103, 30, 187)),
+
+  selector: string constant.other.placeholder
+- begin: span([
+  end: |
+    ], :stroke => rgb(62, 69, 88)),
+
+  selector: meta.function-call.py
+- begin: span([
+  end: |
+    ], :stroke => rgb(58, 74, 100)),
+
+  selector: meta.tag, meta.tag entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(127, 144, 170)),
+
+  selector: keyword.type.variant
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 0)),
+
+  selector: source.ocaml keyword.operator
+- begin: span([
+  end: |
+    ], :stroke => rgb(59, 91, 181)),
+
+  selector: source.ocaml keyword.operator.symbol.infix
+- begin: span([
+  end: |
+    ], :stroke => rgb(59, 91, 181)),
+
+  selector: source.ocaml keyword.operator.symbol.prefix
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: source.ocaml keyword.operator.symbol.infix.floating-point
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: source.ocaml keyword.operator.symbol.prefix.floating-point
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: source.ocaml constant.numeric.floating-point
+listing: 
+  begin: |
+    background(rgb(255, 255, 255) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(255, 255, 255), :stroke => rgb(0, 0, 0), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(255, 255, 255), :stroke => rgb(0, 0, 0) ),"

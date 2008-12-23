@@ -1,0 +1,276 @@
+--- 
+name: Sunburst
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(174, 174, 174), :emphasis => 'italic'),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(51, 135, 204)),
+
+  selector: constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(137, 189, 255)),
+
+  selector: entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(226, 137, 100)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(153, 207, 80)),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(101, 176, 66)),
+
+  selector: string
+- begin: span([
+  end: |
+    ], :stroke => rgb(155, 133, 157)),
+
+  selector: support
+- begin: span([
+  end: |
+    ], :stroke => rgb(62, 135, 227)),
+
+  selector: variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(253, 95, 241), :emphasis => 'italic'),
+
+  selector: invalid.deprecated
+- begin: span([
+  end: |
+    ], :stroke => rgb(253, 95, 241)),
+
+  selector: invalid.illegal
+- begin: span([
+  end: |
+    ]),
+
+  selector: text source
+- begin: span([
+  end: |
+    ], :stroke => rgb(155, 92, 46), :emphasis => 'italic'),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(218, 239, 163)),
+
+  selector: string.quoted source
+- begin: span([
+  end: |
+    ], :stroke => rgb(221, 242, 164)),
+
+  selector: string constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(233, 192, 98)),
+
+  selector: string.regexp
+- begin: span([
+  end: |
+    ], :stroke => rgb(207, 125, 52)),
+
+  selector: string.regexp constant.character.escape, string.regexp source.ruby.embedded, string.regexp string.regexp.arbitrary-repitition
+- begin: span([
+  end: |
+    ], :stroke => rgb(138, 154, 149)),
+
+  selector: string variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(218, 208, 133)),
+
+  selector: support.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(207, 106, 76)),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(137, 150, 168)),
+
+  selector: meta.preprocessor.c
+- begin: span([
+  end: |
+    ], :stroke => rgb(175, 196, 219)),
+
+  selector: meta.preprocessor.c keyword
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: entity.name.type
+- begin: span([
+  end: |
+    ], :stroke => rgb(103, 103, 103), :emphasis => 'italic'),
+
+  selector: meta.cast
+- begin: span([
+  end: |
+    ], :stroke => rgb(73, 73, 73)),
+
+  selector: meta.sgml.html meta.doctype, meta.sgml.html meta.doctype entity, meta.sgml.html meta.doctype string, meta.xml-processing, meta.xml-processing entity, meta.xml-processing string
+- begin: span([
+  end: |
+    ], :stroke => rgb(137, 189, 255)),
+
+  selector: meta.tag, meta.tag entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(224, 197, 137)),
+
+  selector: source entity.name.tag, source entity.other.attribute-name, meta.tag.inline, meta.tag.inline entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(225, 137, 100)),
+
+  selector: entity.name.tag.namespace, entity.other.attribute-name.namespace
+- begin: span([
+  end: |
+    ], :stroke => rgb(205, 168, 105)),
+
+  selector: meta.selector.css entity.name.tag
+- begin: span([
+  end: |
+    ], :stroke => rgb(143, 157, 106)),
+
+  selector: meta.selector.css entity.other.attribute-name.tag.pseudo-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(139, 152, 171)),
+
+  selector: meta.selector.css entity.other.attribute-name.id
+- begin: span([
+  end: |
+    ], :stroke => rgb(155, 112, 63)),
+
+  selector: meta.selector.css entity.other.attribute-name.class
+- begin: span([
+  end: |
+    ], :stroke => rgb(197, 175, 117)),
+
+  selector: support.type.property-name.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(249, 238, 152)),
+
+  selector: meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(134, 147, 165)),
+
+  selector: meta.preprocessor.at-rule keyword.control.at-rule
+- begin: span([
+  end: |
+    ], :stroke => rgb(221, 123, 59)),
+
+  selector: meta.property-value support.constant.named-color.css, meta.property-value constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(143, 157, 106)),
+
+  selector: meta.constructor.argument.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248), :emphasis => 'italic'),
+
+  selector: meta.diff, meta.diff.header
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: markup.deleted
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: markup.changed
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: markup.inserted
+- begin: span([
+  end: |
+    ], :stroke => rgb(233, 192, 98), :emphasis => 'italic'),
+
+  selector: markup.italic
+- begin: span([
+  end: |
+    ], :stroke => rgb(233, 192, 98), :weight => 'bold'),
+
+  selector: markup.bold
+- begin: span([
+  end: |
+    ], :stroke => rgb(225, 137, 100), :underline => 'single'),
+
+  selector: markup.underline
+- begin: span([
+  end: |
+    ], :stroke => rgb(225, 212, 185), :emphasis => 'italic'),
+
+  selector: markup.quote
+- begin: span([
+  end: |
+    ], :stroke => rgb(254, 220, 197)),
+
+  selector: markup.heading, markup.heading entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(225, 212, 185)),
+
+  selector: markup.list
+- begin: span([
+  end: |
+    ], :stroke => rgb(87, 139, 179)),
+
+  selector: markup.raw
+- begin: span([
+  end: |
+    ], :stroke => rgb(246, 123, 55), :emphasis => 'italic'),
+
+  selector: markup comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(96, 166, 51)),
+
+  selector: meta.separator
+- begin: span([
+  end: |
+    ]),
+
+  selector: meta.line.entry.logfile, meta.line.exit.logfile
+- begin: span([
+  end: |
+    ]),
+
+  selector: meta.line.error.logfile
+listing: 
+  begin: |
+    background(rgb(0, 0, 0) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(0, 0, 0), :stroke => rgb(248, 248, 248), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(0, 0, 0), :stroke => rgb(248, 248, 248) ),"

@@ -1,0 +1,306 @@
+--- 
+name: Pastels on Dark
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(85, 85, 85)),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(85, 85, 85)),
+
+  selector: comment.block
+- begin: span([
+  end: |
+    ], :stroke => rgb(173, 147, 97)),
+
+  selector: string
+- begin: span([
+  end: |
+    ], :stroke => rgb(204, 204, 204)),
+
+  selector: constant.numeric
+- begin: span([
+  end: |
+    ], :stroke => rgb(161, 161, 255)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(47, 0, 110)),
+
+  selector: meta.preprocessor
+- begin: span([
+  end: |
+    ], :weight => 'bold'),
+
+  selector: keyword.control.import
+- begin: span([
+  end: |
+    ], :stroke => rgb(161, 161, 255)),
+
+  selector: support.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 255)),
+
+  selector: declaration.function function-result
+- begin: span([
+  end: |
+    ], :weight => 'bold'),
+
+  selector: declaration.function function-name
+- begin: span([
+  end: |
+    ], :weight => 'bold'),
+
+  selector: declaration.function argument-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 0, 255)),
+
+  selector: declaration.function function-arg-type
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: declaration.function function-argument
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: declaration.class class-name
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: declaration.class class-inheritance
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 249, 249), :weight => 'bold'),
+
+  selector: invalid
+- begin: span([
+  end: |
+    ]),
+
+  selector: invalid.deprecated.trailing-whitespace
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: declaration.section section-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(193, 0, 6)),
+
+  selector: string.interpolation
+- begin: span([
+  end: |
+    ], :stroke => rgb(102, 102, 102)),
+
+  selector: string.regexp
+- begin: span([
+  end: |
+    ], :stroke => rgb(193, 193, 68)),
+
+  selector: variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(103, 130, 211)),
+
+  selector: constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(175, 164, 114)),
+
+  selector: constant.character
+- begin: span([
+  end: |
+    ], :stroke => rgb(222, 142, 48), :weight => 'bold'),
+
+  selector: constant.language
+- begin: span([
+  end: |
+    ], :underline => 'single'),
+
+  selector: embedded
+- begin: span([
+  end: |
+    ], :stroke => rgb(133, 142, 244)),
+
+  selector: keyword.markup.element-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(155, 69, 111)),
+
+  selector: keyword.markup.attribute-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(155, 69, 111)),
+
+  selector: meta.attribute-with-value
+- begin: span([
+  end: |
+    ], :stroke => rgb(200, 34, 85), :weight => 'bold'),
+
+  selector: keyword.exception
+- begin: span([
+  end: |
+    ], :stroke => rgb(71, 184, 214)),
+
+  selector: keyword.operator
+- begin: span([
+  end: |
+    ], :stroke => rgb(105, 105, 250), :weight => 'bold'),
+
+  selector: keyword.control
+- begin: span([
+  end: |
+    ], :stroke => rgb(104, 104, 91)),
+
+  selector: meta.tag.preprocessor.xml
+- begin: span([
+  end: |
+    ], :stroke => rgb(136, 136, 136)),
+
+  selector: meta.tag.sgml.doctype
+- begin: span([
+  end: |
+    ], :emphasis => 'italic'),
+
+  selector: string.quoted.docinfo.doctype.DTD
+- begin: span([
+  end: |
+    ], :stroke => rgb(144, 144, 144)),
+
+  selector: comment.other.server-side-include.xhtml, comment.other.server-side-include.html
+- begin: span([
+  end: |
+    ], :stroke => rgb(133, 142, 244)),
+
+  selector: text.html declaration.tag, text.html meta.tag, text.html entity.name.tag.xhtml
+- begin: span([
+  end: |
+    ], :stroke => rgb(155, 69, 111)),
+
+  selector: keyword.markup.attribute-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(119, 119, 119)),
+
+  selector: keyword.other.phpdoc.php
+- begin: span([
+  end: |
+    ], :stroke => rgb(200, 34, 85)),
+
+  selector: keyword.other.include.php
+- begin: span([
+  end: |
+    ], :stroke => rgb(222, 142, 32), :weight => 'bold'),
+
+  selector: support.constant.core.php
+- begin: span([
+  end: |
+    ], :stroke => rgb(222, 142, 16), :weight => 'bold'),
+
+  selector: support.constant.std.php
+- begin: span([
+  end: |
+    ], :stroke => rgb(183, 46, 29)),
+
+  selector: variable.other.global.php
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 255, 0)),
+
+  selector: variable.other.global.safer.php
+- begin: span([
+  end: |
+    ], :stroke => rgb(191, 163, 109)),
+
+  selector: string.quoted.single.php
+- begin: span([
+  end: |
+    ], :stroke => rgb(105, 105, 250)),
+
+  selector: keyword.storage.php
+- begin: span([
+  end: |
+    ], :stroke => rgb(173, 147, 97)),
+
+  selector: string.quoted.double.php
+- begin: span([
+  end: |
+    ], :stroke => rgb(236, 158, 0)),
+
+  selector: entity.other.attribute-name.id.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(184, 205, 6), :weight => 'bold'),
+
+  selector: entity.name.tag.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(237, 202, 6)),
+
+  selector: entity.other.attribute-name.class.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(46, 117, 156)),
+
+  selector: entity.other.attribute-name.pseudo-class.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: invalid.bad-comma.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(155, 46, 77)),
+
+  selector: support.constant.property-value.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(225, 201, 107)),
+
+  selector: support.type.property-name.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(102, 102, 51)),
+
+  selector: constant.other.rgb-value.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(102, 102, 51)),
+
+  selector: support.constant.font-name.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(113, 113, 243)),
+
+  selector: support.constant.tm-language-def, support.constant.name.tm-language-def
+- begin: span([
+  end: |
+    ], :stroke => rgb(105, 105, 250)),
+
+  selector: keyword.other.unit.css
+listing: 
+  begin: |
+    background(rgb(33, 30, 30) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(33, 30, 30), :stroke => rgb(218, 218, 218), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(33, 30, 30), :stroke => rgb(218, 218, 218) ),"

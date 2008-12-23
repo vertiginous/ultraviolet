@@ -1,0 +1,126 @@
+--- 
+name: Monokai
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(117, 113, 94)),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(230, 219, 116)),
+
+  selector: string
+- begin: span([
+  end: |
+    ], :stroke => rgb(174, 129, 255)),
+
+  selector: constant.numeric
+- begin: span([
+  end: |
+    ], :stroke => rgb(174, 129, 255)),
+
+  selector: constant.language
+- begin: span([
+  end: |
+    ], :stroke => rgb(174, 129, 255)),
+
+  selector: constant.character, constant.other
+- begin: span([
+  end: |
+    ]),
+
+  selector: variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(249, 38, 114)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(249, 38, 114)),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(102, 217, 239), :emphasis => 'italic'),
+
+  selector: storage.type
+- begin: span([
+  end: |
+    ], :stroke => rgb(166, 226, 46), :underline => 'single'),
+
+  selector: entity.name.class
+- begin: span([
+  end: |
+    ], :stroke => rgb(166, 226, 46), :emphasis => 'italic'),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(166, 226, 46)),
+
+  selector: entity.name.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(253, 151, 31), :emphasis => 'italic'),
+
+  selector: variable.parameter
+- begin: span([
+  end: |
+    ], :stroke => rgb(249, 38, 114)),
+
+  selector: entity.name.tag
+- begin: span([
+  end: |
+    ], :stroke => rgb(166, 226, 46)),
+
+  selector: entity.other.attribute-name
+- begin: span([
+  end: |
+    ], :stroke => rgb(102, 217, 239)),
+
+  selector: support.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(102, 217, 239)),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(102, 217, 239), :emphasis => 'italic'),
+
+  selector: support.type, support.class
+- begin: span([
+  end: |
+    ]),
+
+  selector: support.other.variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 240)),
+
+  selector: invalid
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 240)),
+
+  selector: invalid.deprecated
+listing: 
+  begin: |
+    background(rgb(39, 40, 34) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(39, 40, 34), :stroke => rgb(248, 248, 242), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(39, 40, 34), :stroke => rgb(248, 248, 242) ),"

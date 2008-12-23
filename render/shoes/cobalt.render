@@ -1,0 +1,236 @@
+--- 
+name: Cobalt
+line: 
+  begin: ""
+  end: "\"\\n\","
+tags: 
+- begin: span([
+  end: |
+    ], :stroke => rgb(225, 239, 255)),
+
+  selector: punctuation - (punctuation.definition.string || punctuation.definition.comment)
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 98, 140)),
+
+  selector: constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 221, 0)),
+
+  selector: entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 157, 0)),
+
+  selector: keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 238, 128)),
+
+  selector: storage
+- begin: span([
+  end: |
+    ], :stroke => rgb(58, 217, 0)),
+
+  selector: string -string.unquoted.old-plist -string.unquoted.heredoc, string.unquoted.heredoc string
+- begin: span([
+  end: |
+    ], :stroke => rgb(0, 136, 255), :emphasis => 'italic'),
+
+  selector: comment
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 255, 187)),
+
+  selector: support
+- begin: span([
+  end: |
+    ], :stroke => rgb(204, 204, 204)),
+
+  selector: variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 128, 225)),
+
+  selector: variable.language
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 238, 128)),
+
+  selector: meta.function-call
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: invalid
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 255, 255)),
+
+  selector: text source, string.unquoted.heredoc, source source
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 252, 255), :emphasis => 'italic'),
+
+  selector: entity.other.inherited-class
+- begin: span([
+  end: |
+    ], :stroke => rgb(158, 255, 128)),
+
+  selector: string.quoted source
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 255, 130)),
+
+  selector: string constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(128, 255, 194)),
+
+  selector: string.regexp
+- begin: span([
+  end: |
+    ], :stroke => rgb(237, 239, 125)),
+
+  selector: string variable
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 176, 84)),
+
+  selector: support.function
+- begin: span([
+  end: |
+    ], :stroke => rgb(235, 147, 154)),
+
+  selector: support.constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 30, 0)),
+
+  selector: support.type.exception
+- begin: span([
+  end: |
+    ], :stroke => rgb(137, 150, 168)),
+
+  selector: meta.preprocessor.c
+- begin: span([
+  end: |
+    ], :stroke => rgb(175, 196, 219)),
+
+  selector: meta.preprocessor.c keyword
+- begin: span([
+  end: |
+    ], :stroke => rgb(115, 129, 125)),
+
+  selector: meta.sgml.html meta.doctype, meta.sgml.html meta.doctype entity, meta.sgml.html meta.doctype string, meta.xml-processing, meta.xml-processing entity, meta.xml-processing string
+- begin: span([
+  end: |
+    ], :stroke => rgb(158, 255, 255)),
+
+  selector: meta.tag, meta.tag entity
+- begin: span([
+  end: |
+    ], :stroke => rgb(158, 255, 255)),
+
+  selector: meta.selector.css entity.name.tag
+- begin: span([
+  end: |
+    ], :stroke => rgb(255, 180, 84)),
+
+  selector: meta.selector.css entity.other.attribute-name.id
+- begin: span([
+  end: |
+    ], :stroke => rgb(95, 228, 97)),
+
+  selector: meta.selector.css entity.other.attribute-name.class
+- begin: span([
+  end: |
+    ], :stroke => rgb(157, 243, 159)),
+
+  selector: support.type.property-name.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(246, 240, 128)),
+
+  selector: meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(246, 170, 17)),
+
+  selector: meta.preprocessor.at-rule keyword.control.at-rule
+- begin: span([
+  end: |
+    ], :stroke => rgb(237, 240, 128)),
+
+  selector: meta.property-value support.constant.named-color.css, meta.property-value constant
+- begin: span([
+  end: |
+    ], :stroke => rgb(235, 147, 154)),
+
+  selector: meta.constructor.argument.css
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: meta.diff, meta.diff.header
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: markup.deleted
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: markup.changed
+- begin: span([
+  end: |
+    ], :stroke => rgb(248, 248, 248)),
+
+  selector: markup.inserted
+- begin: span([
+  end: |
+    ]),
+
+  selector: markup.raw
+- begin: span([
+  end: |
+    ]),
+
+  selector: markup.quote
+- begin: span([
+  end: |
+    ]),
+
+  selector: markup.list
+- begin: span([
+  end: |
+    ], :stroke => rgb(193, 175, 255), :weight => 'bold'),
+
+  selector: markup.bold
+- begin: span([
+  end: |
+    ], :stroke => rgb(184, 255, 217), :emphasis => 'italic'),
+
+  selector: markup.italic
+- begin: span([
+  end: |
+    ], :stroke => rgb(200, 228, 253), :weight => 'bold'),
+
+  selector: markup.heading
+listing: 
+  begin: |
+    background(rgb(0, 34, 64) ,:curve => 12)
+    para( [
+
+  end: "] , :fill => rgb(0, 34, 64), :stroke => rgb(255, 255, 255), :size => 'xx-small', :font => 'Bitstream Vera Sans Mono')"
+document: 
+  begin: |
+    stack(:margin => 4 ){
+
+  end: "}"
+filter: "@escaped.inspect + \", \" "
+line-numbers: 
+  begin: span("
+  end: "\", :fill => rgb(0, 34, 64), :stroke => rgb(255, 255, 255) ),"

@@ -73,7 +73,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--main", "README.txt"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{ultraviolet}
-  s.rubygems_version = %q{1.2.0}
+  s.rubygems_version = %q{1.3.1}
   s.summary = %q{Syntax highlighting engine}
   s.test_files = ["test/test_uv.rb"]
 
@@ -81,7 +81,7 @@ Gem::Specification.new do |s|
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 2
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.3.1') then
       s.add_runtime_dependency(%q<textpow>, [">= 0.10.0"])
       s.add_development_dependency(%q<hoe>, [">= 1.8.2"])
     else
